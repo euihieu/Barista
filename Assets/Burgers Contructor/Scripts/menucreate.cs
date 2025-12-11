@@ -19,26 +19,26 @@ public class menucreate : MonoBehaviour
 
     private void OnMouseDown()
     {
-        gameflow.createMenuItem += foodValue;
+        gameflow.createdMenuItem += foodValue;
 
         if (foodValue == 1000)
         {
-            Debug.Log("Warrior unlocked");
+            Debug.Log("warrior unlocked");
             gameflow.unlockedClasses[0] = 1;
-        }
-
-        if (foodValue == 10000)
-        {
-            Debug.Log("Mage unlocked");
-            gameflow.unlockedClasses[1] = 1;
         }
 
         if (foodValue == 100000)
         {
-            Debug.Log("Boss unlocked");
+            Debug.Log("mage unlocked");
+            gameflow.unlockedClasses[1] = 1;
+        }
+
+        if (foodValue == 1000000)
+        {
+            Debug.Log("boss unlocked");
             gameflow.unlockedClasses[2] = 1;
         }
-        if (gameObject.name != "1000")
+        if (gameObject.name != "10000")
             Instantiate(cloneObj, new Vector3(0, -8, 38), cloneObj.transform.rotation);
         else
             Instantiate(cloneObj, new Vector3(0, -12.5f, 38), cloneObj.transform.rotation);

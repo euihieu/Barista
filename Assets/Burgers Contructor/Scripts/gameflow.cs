@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class gameflow : MonoBehaviour
 {
-    public static int [] orderValue = {11111, 10001, 12101};
+    public static int [] orderValue = {0, 0, 0};
     public static int [] plateValue = {0, 0, 0};
     public static float [] orderTimer = {60, 60, 60};
 
@@ -40,8 +40,6 @@ public class gameflow : MonoBehaviour
 
     public static int [] unlockedClasses ={0, 0, 0, 0, 0};
 
-
-
     void Start()
     {
         StartCoroutine(customerSpawn());
@@ -52,9 +50,6 @@ public class gameflow : MonoBehaviour
     {
         if (gameflow.showOrder == -1)
         {
-
-            //orderValue[1] = FullMenu[1];
-
             for (int rep = 0; rep < 3; rep += 1)
             {
                 if (orderValue[rep] == 11001)
@@ -120,16 +115,7 @@ public class gameflow : MonoBehaviour
         yield return new WaitForSeconds(5f);
         if (unlockedClasses[2] == 1)
         {
-            Instantiate(bossrObj, bossrObj.position, bossrObj.rotation);
+            Instantiate(bossObj, bossObj.position, bossObj.rotation);
         }
-
-
-        {
-            gameflow.showOrder -= Time.deltaTime;
-        }
-
-        // orderValue[0] = FullMenu[0];
-        // orderValue[1] = FullMenu[0];
-        // orderValue[2] = FullMenu[0];
     }
 }
