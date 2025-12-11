@@ -22,7 +22,7 @@ public class cookmove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GetComponent<Transform>().position = new Vector3(0, .66f, 0);
+        GetComponent<Transform>().position = new Vector3(gameflow.plateXpos, .66f, 0);
         // add to the currently selected plate (fix CS0019)
         gameflow.plateValue[gameflow.plateNum] += foodValue;
         stillcooking = "n";
