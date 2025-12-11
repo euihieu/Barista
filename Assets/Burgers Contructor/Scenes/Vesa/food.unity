@@ -132,8 +132,8 @@ GameObject:
   - component: {fileID: 107244716}
   - component: {fileID: 107244715}
   m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
+  m_Name: Main Camera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446d357cb640ffe408ac9f8630488d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  cloneObj: {fileID: 0}
+  cloneObj: {fileID: 7065176642315027689, guid: 81532daccad1e864f996cd8c28a60b89, type: 3}
   foodValue: 10000
 --- !u!64 &322692879
 MeshCollider:
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0a5d13d44dac74a93567b893650e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  cloneObj: {fileID: 0}
+  cloneObj: {fileID: 3917248070558650126, guid: ff777aaed86a7fe4a8f256aeb1c292b8, type: 3}
 --- !u!64 &829446796
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1338,7 +1338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446d357cb640ffe408ac9f8630488d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::clickplace
-  cloneObj: {fileID: 0}
+  cloneObj: {fileID: 3480333696091977637, guid: 2d6272c360ad27d449efc06080e49d45, type: 3}
   foodValue: 100
 --- !u!1001 &3145003523794075335
 PrefabInstance:
@@ -1665,6 +1665,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4650520212377355949, guid: 1720c08a0a1e9ad45996890324808565, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9c8a3ae93c8a82046a93d8b5a2faba01, type: 2}
+    - target: {fileID: 5838143712906894374, guid: 1720c08a0a1e9ad45996890324808565, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838143712906894374, guid: 1720c08a0a1e9ad45996890324808565, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6615619850674284155, guid: 1720c08a0a1e9ad45996890324808565, type: 3}
       propertyPath: m_Name
       value: Pan
@@ -1675,7 +1687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7088225430160499067, guid: 1720c08a0a1e9ad45996890324808565, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7088225430160499067, guid: 1720c08a0a1e9ad45996890324808565, type: 3}
       propertyPath: m_LocalScale.z
@@ -1687,7 +1699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7088225430160499067, guid: 1720c08a0a1e9ad45996890324808565, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.484
       objectReference: {fileID: 0}
     - target: {fileID: 7088225430160499067, guid: 1720c08a0a1e9ad45996890324808565, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1723,7 +1735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7088225430160499067, guid: 1720c08a0a1e9ad45996890324808565, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

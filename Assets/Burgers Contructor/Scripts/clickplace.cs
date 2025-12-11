@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class clickplace : MonoBehaviour
 {
@@ -15,11 +16,26 @@ public class clickplace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            HandleClick();
+        }
     }
 
-    private void OnMouseDown()
+    private void HandleClick()
     {
+        if (Camera.main == null)
+        {
+            Debug.LogError("Main camera not found!");
+            return;
+        }
+
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == gameObject)
+        {
+            Debug.Log("Clicked: " + gameObject.name);
         if (gameObject.name == "bunBottom")
             Instantiate(cloneObj, new Vector3(gameflow.plateXpos, .10f, 0), cloneObj.rotation);
 
@@ -38,6 +54,6 @@ public class clickplace : MonoBehaviour
         gameflow.plateValue[gameflow.plateNum] += foodValue;
 
         Debug.Log(gameflow.plateValue[gameflow.plateNum]+" "+gameflow.orderValue[gameflow.plateNum]);
-        
+        }
     }
 }
